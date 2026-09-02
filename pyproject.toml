@@ -1,0 +1,25 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "osm-house-modeler"
+version = "0.13.6"
+description = "Generate textured 3D building models from OpenStreetMap ways using regional procedural house styles."
+readme = "README.md"
+requires-python = ">=3.14"
+license = {text = "MIT"}
+authors = [{name = "Generated project scaffold"}]
+dependencies = ["Pillow>=12,<13", "pyglet>=2.1.16,<3"]
+
+[project.scripts]
+osm3d = "osm_house_modeler.cli:main"
+
+[project.gui-scripts]
+osm3d-gui = "osm_house_modeler.gui:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/osm_house_modeler"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]

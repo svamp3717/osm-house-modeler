@@ -1,0 +1,5 @@
+# Embedded textured Tk model preview and texture image handling.
+Pillow>=12,<13
+
+# Optional higher-fidelity OpenGL model viewer launched from the GUI.
+pyglet>=2.1.16,<3
